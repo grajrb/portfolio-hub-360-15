@@ -1,69 +1,114 @@
+# Portfolio Hub 360
 
+A modern, responsive portfolio website built with cutting-edge technologies to showcase your skills, projects, and experience.
 
-## Project info
+## Features
 
-**URL**: https://lovable.dev/projects/3c940fcd-a84b-407f-8473-7c4a40a4c095
+- **Hero Section**: Highlight your role and tagline with a visually appealing introduction.
+- **About Section**: Share your background, skills, and experience.
+- **Skills Section**: Display your technical expertise with categorized skill levels.
+- **Projects Section**: Showcase your completed projects with descriptions and links.
+- **Contact Section**: Provide a form for visitors to reach out and links to your social profiles.
+- **Footer**: Include copyright information and links to legal pages.
 
-## How can I edit this code?
+## Technologies Used
 
-There are several ways of editing your application.
+This project is built with:
 
-**Use Lovable**
+- **Vite**: A fast build tool for modern web projects.
+- **TypeScript**: Strongly typed JavaScript for better code quality.
+- **React**: A library for building user interfaces.
+- **shadcn-ui**: A collection of accessible and customizable UI components.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3c940fcd-a84b-407f-8473-7c4a40a4c095) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+Ensure you have the following installed:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (v16 or higher)
+- npm (v7 or higher)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. Clone the repository:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+   ```bash
+   git clone https://github.com/your-username/portfolio-hub-360.git
+   cd portfolio-hub-360
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
 
-# Step 3: Install the necessary dependencies.
-npm i
+   ```bash
+   npm install
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Development
+
+Start the development server with auto-reloading and an instant preview:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+To create a production build:
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Preview
 
-## What technologies are used for this project?
+Preview the production build locally:
 
-This project is built with .
+```bash
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Folder Structure
 
-## How can I deploy this project?
+```
+portfolio-hub-360/
+├── src/                # Source code
+│   ├── components/     # Reusable React components
+│   ├── pages/          # Page components
+│   ├── index.css       # Global styles
+│   └── App.tsx         # Main application entry point
+├── public/             # Static assets
+├── package.json        # Project metadata and dependencies
+├── tailwind.config.ts  # Tailwind CSS configuration
+├── tsconfig.json       # TypeScript configuration
+└── vite.config.ts      # Vite configuration
+```
 
-Simply open [Lovable](https://lovable.dev/projects/3c940fcd-a84b-407f-8473-7c4a40a4c095) and click on Share -> Publish.
+## Scripts
 
-## I want to use a custom domain - is that possible?
+- `npm run dev`: Start the development server.
+- `npm run build`: Build the project for production.
+- `npm run preview`: Preview the production build.
+- `npm run lint`: Run ESLint to check for code issues.
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push the branch.
+4. Submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For any inquiries, feel free to reach out:
+
+- **Email**: gauravupadhayay9801@gmail.com
+- **GitHub**: [grajrb](https://github.com/grajrb)
+- **LinkedIn**: [Gaurav Raj](https://www.linkedin.com/in/gaurav-raj-095a8a129/)
