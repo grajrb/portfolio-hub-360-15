@@ -1,40 +1,58 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
 const skillCategories = [
   {
-    title: 'Frontend',
+    title: 'Languages',
     skills: [
-      { name: 'React', level: 90 },
+      { name: 'C++', level: 85 },
       { name: 'TypeScript', level: 85 },
-      { name: 'JavaScript', level: 95 },
-      { name: 'HTML/CSS', level: 90 },
-      { name: 'Tailwind CSS', level: 85 },
-      { name: 'Next.js', level: 80 },
+      { name: 'JavaScript', level: 80 },
+      { name: 'Python', level: 75 },
+      { name: 'HTML/CSS', level: 85 },
+      { name: 'SQL', level: 80 },
     ],
   },
   {
-    title: 'Backend',
+    title: 'Frameworks',
     skills: [
+      { name: '.NET Core', level: 70 },
       { name: 'Node.js', level: 85 },
-      { name: 'Express', level: 80 },
-      { name: 'MongoDB', level: 75 },
-      { name: 'PostgreSQL', level: 70 },
-      { name: 'GraphQL', level: 65 },
-      { name: 'REST APIs', level: 90 },
+      { name: 'Bootstrap', level: 80 },
+      { name: 'Angular', level: 75 },
     ],
   },
   {
-    title: 'Tools & Others',
+    title: 'Tools & Platforms',
     skills: [
+      { name: 'VS Code', level: 90 },
+      { name: 'npm', level: 85 },
+      { name: 'CMake', level: 70 },
+      { name: 'MSYS2', level: 60 },
       { name: 'Git', level: 90 },
-      { name: 'Docker', level: 75 },
-      { name: 'AWS', level: 70 },
-      { name: 'CI/CD', level: 80 },
-      { name: 'Jest', level: 75 },
-      { name: 'Webpack', level: 70 },
+      { name: 'MATLAB', level: 65 },
+      { name: 'Windows', level: 90 },
+      { name: 'Linux', level: 80 },
+      { name: 'Azure', level: 70 },
+    ],
+  },
+  {
+    title: 'DevOps & Databases',
+    skills: [
+      { name: 'CI/CD Pipelines', level: 80 },
+      { name: 'GitHub Actions', level: 75 },
+      { name: 'Docker (Basic)', level: 60 },
+      { name: 'Postgres DB', level: 85 },
+      { name: 'SQLite', level: 80 },
+      { name: 'Redis', level: 70 },
+    ],
+  },
+  {
+    title: 'Other',
+    skills: [
+      { name: 'System Design', level: 75 },
+      { name: 'Open Source Software (OSS)', level: 80 },
     ],
   },
 ];
@@ -89,12 +107,12 @@ export const SkillsSection = () => {
         
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 reveal-on-scroll delay-200">
           <Card className="text-center p-8 bg-secondary/50 border border-border/40">
-            <h4 className="font-display text-4xl font-bold text-primary mb-2">3+</h4>
+            <h4 className="font-display text-4xl font-bold text-primary mb-2">2+</h4>
             <p className="text-muted-foreground text-sm">Years Experience</p>
           </Card>
           
           <Card className="text-center p-8 bg-secondary/50 border border-border/40">
-            <h4 className="font-display text-4xl font-bold text-primary mb-2">20+</h4>
+            <h4 className="font-display text-4xl font-bold text-primary mb-2">10+</h4>
             <p className="text-muted-foreground text-sm">Projects Completed</p>
           </Card>
           

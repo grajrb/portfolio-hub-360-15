@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -14,22 +13,37 @@ export const Footer = () => {
               A showcase of my work and skills in design and development.
             </p>
             <div className="flex space-x-4">
-              <Button size="icon" variant="ghost" className="rounded-full hover:text-primary hover:bg-primary/10">
-                <Github size={20} />
-                <span className="sr-only">GitHub</span>
-              </Button>
-              <Button size="icon" variant="ghost" className="rounded-full hover:text-primary hover:bg-primary/10">
-                <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
-              </Button>
-              <Button size="icon" variant="ghost" className="rounded-full hover:text-primary hover:bg-primary/10">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </Button>
-              <Button size="icon" variant="ghost" className="rounded-full hover:text-primary hover:bg-primary/10">
-                <Mail size={20} />
-                <span className="sr-only">Email</span>
-              </Button>
+              <a
+                href="https://github.com/grajrb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full hover:text-primary hover:bg-primary/10"
+              >
+                <Button size="icon" variant="ghost">
+                  <Github size={20} />
+                  <span className="sr-only">GitHub</span>
+                </Button>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/gaurav-raj-095a8a129/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full hover:text-primary hover:bg-primary/10"
+              >
+                <Button size="icon" variant="ghost">
+                  <Linkedin size={20} />
+                  <span className="sr-only">LinkedIn</span>
+                </Button>
+              </a>
+              <a
+                href="mailto:gauravupadhayay9801@gmail.com"
+                className="rounded-full hover:text-primary hover:bg-primary/10"
+              >
+                <Button size="icon" variant="ghost">
+                  <Mail size={20} />
+                  <span className="sr-only">Email</span>
+                </Button>
+              </a>
             </div>
           </div>
           
@@ -47,8 +61,8 @@ export const Footer = () => {
           <div>
             <h3 className="font-display text-lg font-semibold mb-4">Contact</h3>
             <address className="not-italic text-muted-foreground">
-              <p className="mb-2">email@example.com</p>
-              <p className="mb-2">San Francisco, CA</p>
+              <p className="mb-2">gauravupadhayay9801@gmail.com</p>
+              <p className="mb-2">Coimbatore, Tamil Nadu</p>
             </address>
           </div>
         </div>
@@ -58,8 +72,18 @@ export const Footer = () => {
             © {new Date().getFullYear()} Portfolio. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+            <a
+              href="/privacy-policy"
+              className="hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/terms-of-service"
+              className="hover:text-foreground transition-colors"
+            >
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>

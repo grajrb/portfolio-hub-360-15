@@ -1,11 +1,11 @@
-
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/components/ui/use-toast';
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin } from 'lucide-react';
 
 export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,23 +24,33 @@ export const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-      
-      setIsSubmitting(false);
-    }, 1500);
+
+    emailjs
+      .send(
+        'gauravupadhayay9801@gmail.com', // Replace with your EmailJS service ID
+        'gauravupadhayay9801@gmail.com', // Replace with your EmailJS template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'Ygauravupadhayay9801@gmail.com' // Replace with your EmailJS user ID
+      )
+      .then(() => {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      })
+      .catch(() => {
+        toast({
+          title: "Error sending message",
+          description: "Please try again later.",
+        });
+      })
+      .finally(() => setIsSubmitting(false));
   };
 
   return (
@@ -160,7 +170,7 @@ export const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-medium mb-1">Email</h4>
-                      <p className="text-muted-foreground">email@example.com</p>
+                      <p className="text-muted-foreground">gauravupadhayay9801@gmail.com</p>
                     </div>
                   </div>
                   
@@ -170,7 +180,7 @@ export const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-medium mb-1">Phone</h4>
-                      <p className="text-muted-foreground">+1 (123) 456-7890</p>
+                      <p className="text-muted-foreground">+91 7992425448</p>
                     </div>
                   </div>
                   
@@ -179,31 +189,34 @@ export const ContactSection = () => {
                       <MapPin size={20} className="text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium mb-1">Location</h4>
-                      <p className="text-muted-foreground">San Francisco, CA</p>
+                      <h4 className="font-medium mb-1">Coimbatore</h4>
+                      <p className="text-muted-foreground">Coimbatore, Tamil Nadu</p>
                     </div>
                   </div>
                 </div>
-                
+
+                {/* Follow Me Section */}
                 <div className="mt-8">
                   <h4 className="font-medium mb-4">Follow Me</h4>
                   <div className="flex space-x-3">
-                    <Button variant="outline" size="icon" className="rounded-full button-hover-effect">
-                      <span className="sr-only">GitHub</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-                    </Button>
-                    <Button variant="outline" size="icon" className="rounded-full button-hover-effect">
-                      <span className="sr-only">LinkedIn</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    </Button>
-                    <Button variant="outline" size="icon" className="rounded-full button-hover-effect">
-                      <span className="sr-only">Twitter</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-                    </Button>
-                    <Button variant="outline" size="icon" className="rounded-full button-hover-effect">
-                      <span className="sr-only">Instagram</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                    </Button>
+                    <a
+                      href="https://github.com/grajrb"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button-hover-effect inline-flex items-center justify-center px-4 py-2 border border-border/60 rounded text-sm font-medium hover:shadow-lg transition-all duration-300"
+                    >
+                      <Github size={16} className="mr-1" />
+                      GitHub
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/gaurav-raj-095a8a129/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button-hover-effect inline-flex items-center justify-center px-4 py-2 border border-border/60 rounded text-sm font-medium hover:shadow-lg transition-all duration-300"
+                    >
+                      <Linkedin size={16} className="mr-1" />
+                      LinkedIn
+                    </a>
                   </div>
                 </div>
               </CardContent>
