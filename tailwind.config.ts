@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -117,7 +118,7 @@ export default {
 				'scale-in': 'scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
 				'reveal': 'reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards'
 			}
-		}
-	},
-	plugins: [require("tailwindcss-animate")],
+			}
+		},
+		plugins: [tailwindcssAnimate],
 } satisfies Config;

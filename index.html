@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,8 +23,20 @@
 
   <body>
     <div id="root"></div>
+    <section className="bg-white text-black dark:bg-gray-900 dark:text-white">
+    </section>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      useEffect(() => {
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark'); // Adds the 'dark' class to <html>
+        } else {
+          document.documentElement.classList.remove('dark'); // Removes the 'dark' class from <html>
+        }
+        localStorage.setItem('theme', theme); // Save the theme preference
+      }, [theme]);
+    </script>
   </body>
 </html>

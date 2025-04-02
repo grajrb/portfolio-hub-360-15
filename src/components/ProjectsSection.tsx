@@ -102,9 +102,14 @@ export const ProjectsSection = () => {
         </div>
 
         <div className="mt-12 text-center reveal-on-scroll">
-          <Button size="lg" variant="outline" className="button-hover-effect">
+          <a
+            className="button-hover-effect inline-flex items-center justify-center px-6 py-3 border border-border/60 rounded text-lg font-medium hover:shadow-lg transition-all duration-300"
+            href="https://github.com/grajrb?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             View All Projects
-          </Button>
+          </a>
         </div>
 
         <div className="reveal-on-scroll delay-200">
