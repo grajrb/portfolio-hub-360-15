@@ -101,7 +101,7 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes and push the branch.
 4. Submit a pull request.
 
-## License
+
 
 ## License
 
